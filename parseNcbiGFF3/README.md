@@ -15,7 +15,7 @@ python3 parseNcbiGff3.py <arguments>
 The help page for the program is shown below.
 
 
-```bash
+```
 usage: parseNcbiGff3.py [-h] /path/to/gff3/dir .gff3 /path/to/out.csv
 
 # -------------------------------------------------------- #
