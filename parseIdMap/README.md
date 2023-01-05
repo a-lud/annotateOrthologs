@@ -58,7 +58,8 @@ The output from the tool is a CSV file. The UniProtKB accession will always be t
 column, while the remaining columns are dependent on what the user asks for. An example
 of outputs is shown below.
 
-Output: 'idmapping.dat.gz'
+Output for 'idmapping.dat.gz' when asking for `Gene_Name` entries.
+
 ```
 accession,idtype,id
 A4K2U9,Gene_Name,YWHAB
@@ -72,7 +73,8 @@ Q5ZKC9,Gene_Name,YWHAZ
 P63102,Gene_Name,Ywhaz
 ```
 
-Output: 'idmapping_selected.tab.gz'
+Output for 'idmapping_selected.tab.gz' when asking of `GO` entries
+
 ```
 accession,GO
 Q60495,GO:0030424; GO:0009986; GO:0005905; ... GO:0006417; GO:0008542
