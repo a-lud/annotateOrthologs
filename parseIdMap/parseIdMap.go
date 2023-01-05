@@ -73,15 +73,13 @@ func main() {
 	// Arguments
 	parser := argparse.NewParser(
 		"parseIdMap",
-		"This is a tool to parse the UniProtKB 'IDmapping.dat.gz' and 'IDmapping_selected.tab.gz'"+
-			"files for key information when given a CSV file containing UniprotKB accessions."+
-			"As these files are cumbersome to work with due to their size, I've tried to speed"+
-			"things up by utilising go-routines to speed up file parsing. However, this process still"+
-			"takes a bit of, unfortunately (just because of the sheer size of the file (~21Gb gzipped)."+
-			"For example, parsing the 'IDmapping.dat.gz' file for ~11,600 accessions took 17 minutes."+
+		"This is a tool to parse the UniProtKB 'idmapping.dat.gz' and 'idmapping_selected.tab.gz' "+
+			"files for key information when given a CSV file containing UniprotKB accessions. "+
+			"As these files are cumbersome to work with due to their size, I've tried to speed "+
+			"things up by utilising go-routines. Even so, it can still take a bit of time to process the data."+
 			"\n\n"+
 			"\t\t  "+
-			"This tool is supposed to be simple, merely providing a somewhat easy method to extract"+
+			"This tool is supposed to be simple, merely providing a somewhat easy method to extract "+
 			"information from these files without having to rely on the web-api.",
 	)
 
