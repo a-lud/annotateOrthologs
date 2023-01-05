@@ -26,8 +26,8 @@ $ go build parseFunannotate.go
 
 The help page for the tool is shown below.
 
-```
-usage: msaSummary [-h|--help] -i|--in "<value>" -o|--out "<value>"
+```text
+usage: parseFunannotate [-h|--help] -i|--in "<value>" -o|--out "<value>"
 
                   A simple tool to parse the annotation output from Funannotate
                   and generate a topGO compatible TSV for GO enrichment.
@@ -40,14 +40,14 @@ Arguments:
 ```
 
 Given a single `Funannotate` annotations file, this program will quickly parse the gene-symbol and GO
-Term information. 
+Term information.
 
 ## Output
 
 The output from this tool is a *TSV* file with the following columns: gene-identifier, transcript-identifier,
 gene-symbol and GO Terms. An example of the output for a single file is shown below.
 
-```
+```text
 FUN_000001	FUN_000001-T1		GO:0005515 GO:0030198
 FUN_30186	FUN_30186-T1		GO:0005515
 FUN_000002	FUN_000002-T1	LSM7	GO:0000398 GO:0000956
