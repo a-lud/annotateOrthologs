@@ -113,13 +113,15 @@ def getGeneSymbol(gffs: list[DirEntry], outfile: str):
             if "gene" not in g.attributes.keys():
                 continue
             if g["gene"][0].startswith("LOC1"):
-                continue
+                if 'uncharacterized LOC' in g['product'][0]:
+                    continue
 
             geneID = g["ID"][0]
             geneSymbol = g["gene"][0]
+            product = g["product"][0].split(', transcript variant')[0].replace(',', ' ')
 
             # Append CSV string to list
-            csv.append(f"{name},{geneID},{geneSymbol}")
+            csv.append(f"{name},{geneID},{geneSymbol},{product}")
 
         # Write list to file
         logging.info(f"\t\t\t\t- Writing results for {name}")
